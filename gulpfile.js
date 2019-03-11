@@ -56,12 +56,12 @@ function js() {
   return browserify(path.src.js)
     .bundle()
     .pipe(source('bundle.js'))
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError())
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
+    // .pipe(eslint())
+    // .pipe(eslint.format())
+    // .pipe(eslint.failAfterError())
+    // .pipe(babel({
+    //   presets: ['@babel/env']
+    // }))
     .pipe(dest(path.build.js))
     .pipe(reload({stream: true}))
 };
